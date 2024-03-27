@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://duueps1amypco"]
+
+[ext_resource type="Script" path="res://scripts/inventory/DragPreview.gd" id="1_u5oar"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w2tdn"]
+font_size = 18
+
+[node name="DragPreview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_u5oar")
+
+[node name="Item" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 140.0
+offset_bottom = 140.0
+
+[node name="ItemIcon" type="TextureRect" parent="Item"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="LabelQuantity" type="Label" parent="Item"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_w2tdn")
+horizontal_alignment = 2

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c876128hgjx1y"]
+
+[ext_resource type="PackedScene" uid="uid://duueps1amypco" path="res://scenes/interface/drag_preview.tscn" id="1_1sfpr"]
+[ext_resource type="Script" path="res://scripts/inventory/InventoryMenu.gd" id="1_2dvga"]
+[ext_resource type="Script" path="res://scripts/inventory/InventoryHandler.gd" id="1_8meeo"]
+[ext_resource type="PackedScene" uid="uid://fidr1u8j1376" path="res://scenes/interface/inventory_tooltip.tscn" id="4_vv6au"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_8meeo")
+
+[node name="InventoryContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryMenu" type="GridContainer" parent="InventoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_2dvga")
+
+[node name="DragPreview" parent="InventoryContainer" instance=ExtResource("1_1sfpr")]
+layout_mode = 2
+
+[node name="InventoryTooltip" parent="InventoryContainer" instance=ExtResource("4_vv6au")]
+visible = false
+layout_mode = 2

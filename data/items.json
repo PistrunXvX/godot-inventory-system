@@ -1,0 +1,22 @@
+{
+  "orange": {
+	"name": "Апельсин",
+	"description": "Сочный вкусный желтый апельсин!",
+	"icon": "orange_icon.png",
+	"stackable": true,
+	"quantity": 1,
+  },
+  "potion": {
+	"name": "Зелье здоровья",
+	"description": "Прибавляет +5 к здоровью",
+	"icon": "health_icon.png",
+	"stackable": true,
+	"quantity": 1,
+  },
+  "sword": {
+	"name": "Меч",
+	"description": "Старый ржавый меч",
+	"icon": "sword_icon.png",
+	"stackable": false,
+  }
+}
